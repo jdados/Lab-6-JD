@@ -1,15 +1,28 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# encoder function, author: Jeremiah Dados
+def encoder(password):
+    x = ""
+    for i in password:
+        x = x + str(int(i)+3)
+    return x
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
+# main function, author: Jeremiah Dados
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    while True:
+        print("Menu\n"
+        "-------------\n"
+        "1. Encode\n"
+        "2. Decode\n"
+        "3. Quit\n")
+        c = int(input("Please enter an option: "))
+        if c == 1:
+            p = input("Please enter your password to encode: ")
+            encoded_password = encoder(p)
+            print("Your password has been encoded and stored!\n")
+        elif c == 2:
+            # decoder function call goes here
+            continue
+        elif c == 3:
+            break
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
